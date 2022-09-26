@@ -1,3 +1,5 @@
+
+
 import axios from 'axios'
 
 const apiClient = axios.create({
@@ -12,5 +14,8 @@ const apiClient = axios.create({
 export default {
   getEvents() {
     return apiClient.get('/events')
+  },
+  getEvent(id) {
+    return apiClient.get('/events/' + id)
   }
 }
